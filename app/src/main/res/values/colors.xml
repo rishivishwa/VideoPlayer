@@ -9,7 +9,7 @@
     <color name="white">#FFFFFFFF</color>
     <!--    custom colors-->
     <color name="cool_blue">#0091EA</color>
-    <color name="cool_green">#64DD17</color>
-    <color name="cool_pink">#F50057</color>
-    <color name="yellow">#FFD600</color>
+    <color name="cool_green">#317704</color>
+    <color name="cool_pink">#CA0048</color>
+    <color name="yellow">#E1BD04</color>
 </resources>

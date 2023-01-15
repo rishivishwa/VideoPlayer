@@ -34,7 +34,7 @@
         <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
     </style>
     <style name="coolBlueNav" parent="Theme.MaterialComponents.Light">
-        <item name="themeColor">@color/cool_blue</item>
+        <item name="themeColor">@color/purple_500</item>
         <item name="colorPrimary">@color/white</item>
         <item name="colorPrimaryVariant">?attr/themeColor</item>
         <item name="colorOnPrimary">@color/black</item>

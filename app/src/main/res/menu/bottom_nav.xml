@@ -6,4 +6,7 @@
     <item android:id="@+id/foldersView"
         android:title="@string/all_folders"
         android:icon="@drawable/folder_icon"/>
+    <item android:id="@+id/trandingView"
+        android:title="@string/youtube"
+        android:icon="@drawable/youtube_icon"/>
 </menu>

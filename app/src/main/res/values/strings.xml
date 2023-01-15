@@ -35,7 +35,7 @@
     <string name="pip_mode">PIP Mode</string>
     <string name="search">Search</string>
 
-<!--strings for video more features-->
+    <!--strings for video more features-->
     <string name="rename">Rename </string>
     <string name="delete">Delete</string>
     <string name="info">Info</string>
@@ -43,10 +43,13 @@
     <string name="orientation">Orientation</string>
     <string name="O">0</string>
     <string name="apply_to_all">Apply To All Upcoming Videos</string>
+    <string name="ad_unit_id">ca-app-pub-3940256099942544/3347511713</string>
 
-<!-- strings for online playing features-->
+    <!-- strings for online playing features-->
     <string name="add_link">Paste Link</string>
     <string name="play">Play Video</string>
     <string name="play_online">Play Online</string>
     <string name="youtube">Youtube</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

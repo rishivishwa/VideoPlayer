@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.harshRajpurohit.videoPlayer">
+    package="com.rishi.videoPlayer">
 
 <!--    for online playing features-->
     <uses-permission android:name="android.permission.INTERNET" />
@@ -20,13 +20,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.VideoPlayer"
         tools:ignore="AllowBackup">
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-3940256099942544~3347511713"/>
+
         <activity
-            android:name=".AboutActivity"
+            android:name="com.rishi.videoPlayer.AboutActivity"
             android:exported="false"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity"/>
         <activity
-            android:name=".PlayerActivity"
+            android:name="com.rishi.videoPlayer.PlayerActivity"
             android:configChanges="uiMode|orientation|screenSize|screenLayout|smallestScreenSize|keyboardHidden"
             android:launchMode="singleTask"
             android:resizeableActivity="true"
@@ -42,11 +46,11 @@
 
         </activity>
         <activity
-            android:name=".FoldersActivity"
+            android:name="com.rishi.videoPlayer.FoldersActivity"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name=".MainActivity"
+            android:name="com.rishi.videoPlayer.MainActivity"
             android:exported="true"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity">
@@ -57,11 +61,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".UrlPlayerActivity"
+            android:name="com.rishi.videoPlayer.UrlPlayerActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:exported="false"/>
         <activity
-            android:name=".UrlActivity"
+            android:name="com.rishi.videoPlayer.UrlActivity"
             android:configChanges="keyboardHidden|keyboard"
             android:exported="false"
             android:screenOrientation="portrait"
