@@ -8,6 +8,8 @@ import android.graphics.Color
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.provider.MediaStore
 import android.view.LayoutInflater
 import android.view.MenuItem
@@ -30,7 +32,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     private lateinit var toggle: ActionBarDrawerToggle
-//    private var runnable: Runnable? = null
+    private var runnable: Runnable? = null
     private lateinit var currentFragment: Fragment
 
     companion object {
@@ -44,8 +46,8 @@ class MainActivity : AppCompatActivity() {
             R.style.coolPinkNav, R.style.coolBlueNav, R.style.coolPurpleNav, R.style.coolGreenNav,
             R.style.coolRedNav, R.style.coolBlackNav
         )
-//        var dataChanged: Boolean = false
-//        var adapterChanged: Boolean = false
+        var dataChanged: Boolean = false
+        var adapterChanged: Boolean = false
         val sortList = arrayOf(
             MediaStore.Video.Media.DATE_ADDED + " DESC",
             MediaStore.Video.Media.DATE_ADDED,
@@ -75,15 +77,15 @@ class MainActivity : AppCompatActivity() {
             videoList = getAllVideos(this)
             setFragment(VideosFragment())
 
-//            runnable = Runnable {
-//                if (dataChanged) {
-//                    videoList = getAllVideos(this)
-//                    dataChanged = false
-//                    adapterChanged = true
-//                }
-//                Handler(Looper.getMainLooper()).postDelayed(runnable!!, 200)
-//            }
-//            Handler(Looper.getMainLooper()).postDelayed(runnable!!, 0)
+            runnable = Runnable {
+                if (dataChanged) {
+                    videoList = getAllVideos(this)
+                    dataChanged = false
+                    adapterChanged = true
+                }
+                Handler(Looper.getMainLooper()).postDelayed(runnable!!, 200)
+            }
+            Handler(Looper.getMainLooper()).postDelayed(runnable!!, 0)
         } else {
             folderList = ArrayList()
             videoList = ArrayList()
@@ -257,10 +259,10 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
-//    override fun onDestroy() {
-//        super.onDestroy()
-//        runnable = null
-//    }
+    override fun onDestroy() {
+        super.onDestroy()
+
+    }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)

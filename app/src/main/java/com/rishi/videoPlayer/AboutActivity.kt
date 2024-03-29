@@ -13,6 +13,6 @@ class AboutActivity : AppCompatActivity() {
         val binding = ActivityAboutBinding.inflate(layoutInflater)
         setContentView(binding.root)
         supportActionBar?.title = "About"
-        binding.aboutText.text = "Developed By: Harsh H. Rajpurohit \n\nIf you want to provide feedback, I will love to hear that."
+        binding.aboutText.text = "Developed By: Robin and Rishikesh Sharma \n\nIf you want to provide feedback, I will love to hear that."
     }
 }
